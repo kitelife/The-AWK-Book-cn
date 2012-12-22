@@ -96,6 +96,42 @@ awk的基本操作是一行一行地扫描输入，搜索匹配任意程序中�
 
 **执行AWK程序**
 
+执行awk程序的方式有多种。你可以输入如下形式的命令行：::
+
+    awk 'program' input files
+
+从而在每个指定的输入文件上执行这个program。例如，你可以输入：::
+
+    awk '$3 == 0 { print $1 }' file1 file2
+
+打印file1和file2文件中第三列为0的每一行的第一列。
+
+你可以省略命令行中的输入文件，仅输入：::
+
+    awk 'program'
+
+这种情况下，awk会将program应用于你在终端中接着输入的任意数据行，直到你输入一个文件结束信号（Unix系统上为control-d）。如下是Unix系统的一个会话示例：
+
+| $ awk '$3 == 0 { print $1 }'
+| Beth    4.00    0
+
+**Beth**
+
+| Dan   3.75    0
+
+**Dan**
+
+| Kathy 3.75    10
+| Kathy 3.75    0
+
+**Kathy**
+
+| ...
+
+加粗的字符是计算机打印的。
+
+
+
 .. toctree::
     :hidden:
 
