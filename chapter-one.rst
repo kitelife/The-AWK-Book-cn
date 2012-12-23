@@ -241,12 +241,14 @@ Awk 程序一次从输入文件的中读取一行内容并把它分割成一个�
 
 `printf` 语句中的规格字符串包含两个 `%` 规格。第一个是 `%s` ，说明以字符串的方式打印第一个值 `$1` 。第二个是 `%.2f` ，说明以数字的方式打印第二个值 `$2*$3` ，并保留小数点后面两位。规格字符串中其他东西，包括美元符号，仅逐字打印。字符串尾部的 `\\n` 代表开始新的一行，使得后续输出将从下一行开始。以 `emp.data` 为输入，该程序产生：
 
-| total pay for Beth is $0.00
-| total pay for Dan is $0.00
-| total pay for Kathy is $40.00
-| total pay for Mark is $100.00
-| total pay for Mary is $121.00
-| total pay for Susie is $76.50
+::
+
+    total pay for Beth is $0.00
+    total pay for Dan is $0.00
+    total pay for Kathy is $40.00
+    total pay for Mark is $100.00
+    total pay for Mary is $121.00
+    total pay for Susie is $76.50
 
 `printf` 不会自动产生空格或者新的行，必须是你自己来创建，所以不要忘了 `\\n` 。
 
@@ -256,12 +258,14 @@ Awk 程序一次从输入文件的中读取一行内容并把它分割成一个�
 
 第一个规格 `%-8s` 将一个姓名以字符串形式在8个字符宽度的字段中左对齐输出。第二个规格 `%6.2f` 将薪酬以数字的形式，保留小数点后两位，在6个字符宽度的字段中输出。
 
-| Beth     $  0.00
-| Dan      $  0.00
-| Kathy    $ 40.00
-| Mark     $100.00
-| Mary     $121.00
-| Susie    $ 76.50
+::
+
+    Beth     $  0.00
+    Dan      $  0.00
+    Kathy    $ 40.00
+    Mark     $100.00
+    Mary     $121.00
+    Susie    $ 76.50
 
 之后我们将展示更多的 `printf` 示例。一切精彩尽在2.4小节。
 
@@ -273,12 +277,15 @@ Awk 程序一次从输入文件的中读取一行内容并把它分割成一个�
 
 将awk的输出通过管道传给 `sort` 命令，输出为：
 
-|   0.00    Beth  4.00 0
-|   0.00    Dan   3.75 0
-|  40.00    Kathy 4.00 10
-|  76.50    Susie 4.25 18
-| 100.00    Mark  5.00 20
-| 121.00    Mary  5.50 22
+::
+
+      0.00    Beth  4.00 0
+      0.00    Dan   3.75 0
+     40.00    Kathy 4.00 10
+     76.50    Susie 4.25 18
+    100.00    Mark  5.00 20
+    121.00    Mary  5.50 22
+
 
 .. toctree::
     :hidden:
