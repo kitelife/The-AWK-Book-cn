@@ -6,7 +6,10 @@
 AWK程序设计语言
 =====================================
 
-目录:
+作者： Alfred V. Aho , Brian W. Kernighan , Peter J. Weinberger
+
+译者： `youngsterxyf <https://github.com/youngsterxyf>`_ , `pylemon <https://github.com/pylemon>`_
+
 
 .. toctree::
     chapter-one
